@@ -1,0 +1,43 @@
+{% block subject %}Welcome to HealthTunes.org!{% endblock %}
+
+{% block body_text %}
+{% autoescape false %}
+    Dear {{ user.getFirstname() }}
+
+    A warm welcome to the HealthTunes community.
+
+    You are only one step away from getting access to your free HealthTunes.org account.
+    Here is the code to activate your account:
+
+    {{ token }}
+
+    You can also confirm the registration by clicking the following link: {{ confirmationUrl }}
+
+
+    HOW TO LISTEN TO YOUR SOUND THERAPY!
+
+    1. LOG IN
+    2. GO TO Therapies
+    3. Search a therapy based on your Symptoms/Syndromes, Preview Therapy by clicking Play
+    4. Click on "Details" on "CD symbol"
+    5. Add to Schedule (top line Menu) and set start time
+    6. Open Therapy Scheduler
+    7. Click Play Icon in Schedule
+
+
+    For further questions about functionality and more don't hesitate to visit our FAQ site on HealthTunes.org.
+
+    Be Well!
+    Your HealthTunes Support Team.
+
+    __________________________
+
+    HealthTunes
+    help@HealthTunes.org
+    Los Angeles, CA 90068
+{% endautoescape %}
+{% endblock %}
+
+{% block body_html %}
+    {% include 'email/confirmation.html.twig' %}
+{% endblock %}

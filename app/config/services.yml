@@ -1,0 +1,154 @@
+# Learn more about services, parameters and containers at
+# http://symfony.com/doc/current/book/service_container.html
+parameters:
+#    parameter_name: value
+
+services:
+
+    #services:
+    #    jms_serializer.datetimeimmutable_handler:
+    #        class: ApiBundle\Serializer\DateTimeImmutableHandler
+    #        tags:
+    #            - { name: jms_serializer.subscribing_handler }
+
+    app.tmp_file_uploader:
+        class: AppBundle\Service\FileUploader
+        arguments: ['%kernel.root_dir%', '%tmp_path%']
+
+    app.batch_audio_uploader:
+        class: AppBundle\Service\FileUploader
+        arguments: ['%kernel.root_dir%', '%uploaded_audio_path%']
+
+    pagination_factory:
+        class: ApiBundle\Pagination\PaginationFactory
+        arguments: ['@router']
+
+    app.beat_api_service:
+        class: AppBundle\Service\BeatApiService
+        arguments: ['@vich_uploader.storage', '%kernel.root_dir%', '%ffmpeg_skip_binaries%', '%ffmpeg_binary_path%', '%ffprobe_binary_path%', '%api_curl_url%', '%api_callback_url%', '@logger']
+        tags:
+             - { name: monolog.logger, channel: beat_api }
+
+    app.therapy_service:
+        class: AppBundle\Service\TherapyService
+        arguments: ['@doctrine.orm.entity_manager', '@app.beat_api_service', '%kernel.root_dir%', '%library_therapies_path%', '%library_therapy_previews_path%', '%api_server_async%']
+
+    app.user_therapy_service:
+        class: AppBundle\Service\UserTherapyService
+        arguments: ['@doctrine.orm.default_entity_manager']
+
+    app.track_service:
+        class: AppBundle\Service\TrackService
+        arguments: ['@app.beat_api_service', '%kernel.root_dir%', '%database_tracks_path%']
+
+    app.uploaded_audio_service:
+        class: AppBundle\Service\UploadedAudioService
+        arguments: ['@app.beat_api_service', '%kernel.root_dir%', '%uploaded_audio_path%', '%converted_audio_path%', '%api_converter_url%', '%api_callback_url%', '@logger']
+        tags:
+             - { name: monolog.logger, channel: convert_api }
+
+    app.statistics_service:
+        class: AppBundle\Service\StatisticsService
+        arguments: []
+
+    app.user_avatar:
+        class: AppBundle\Service\UserAvatar
+        arguments: ['@vich_uploader.storage', '@liip_imagine.cache.manager', '%default_user_profile_image%']
+
+    app.database_service:
+        class: AppBundle\Service\DatabaseService
+        arguments: ['@doctrine.orm.default_entity_manager', '%kernel.root_dir%', '%converted_audio_path%', '%csv_import_log_path%', '%csv_export_path%']
+
+#    app.user_service:
+#        class: AppBundle\Service\UserService
+#        arguments: ['@doctrine.orm.default_entity_manager']
+
+    # Listener for auto upload via upload service when persiting doctrine entities
+    # and also for fetching the filename of the upload object on postLoad
+    # see: http://symfony.com/doc/current/controller/upload_file.html#using-a-doctrine-listener
+    #app.doctrine_news_upload_listener:
+    #    class: AppBundle\EventListener\NewsUploadListener
+    #    arguments: ['@app.file_uploader']
+    #    tags:
+    #        - { name: doctrine.event_listener, event: prePersist }
+    #        - { name: doctrine.event_listener, event: postLoad }
+    #        - { name: doctrine.event_listener, event: postLoad }
+
+    #app.queryparamservice:
+    #    class: AppBundle\Service\QueryParamService
+
+    app.jwt_created_listener:
+        class: AuthBundle\EventListener\JWTCreatedListener
+        arguments: ['@request_stack', '@app.user_avatar']
+        tags:
+            - { name: kernel.event_listener, event: lexik_jwt_authentication.on_jwt_created, method: onJWTCreated }
+
+    app.jwt_decoded_listener:
+        class: AuthBundle\EventListener\JWTDecodedListener
+        arguments: [ '@request_stack' ]
+        tags:
+            - { name: kernel.event_listener, event: lexik_jwt_authentication.on_jwt_decoded, method: onJWTDecoded }
+
+    app.authentication_success_listener:
+        class: AuthBundle\EventListener\AuthenticationSuccessListener
+        tags:
+            - { name: kernel.event_listener, event: lexik_jwt_authentication.on_authentication_success, method: onAuthenticationSuccessResponse }
+
+    app.exception_response_listener:
+        class: AuthBundle\EventListener\ExceptionResponseListener
+        tags:
+            - { name: kernel.event_listener, event: kernel.exception, method: onKernelResponse }
+
+    app_user.activity_listener:
+        class: AppBundle\EventListener\ActivityListener
+        arguments: ['@security.token_storage', '@fos_user.user_manager']
+        tags:
+            - { name: kernel.event_listener, event: kernel.controller, method: onCoreController }
+
+    app_user.login_success_listener:
+        class: AppBundle\EventListener\SecurityListener
+        arguments: ['@security.token_storage', '@doctrine.orm.entity_manager']
+        tags:
+            - { name: kernel.event_listener, event: security.interactive_login, method: onSecurityInteractiveLogin }
+            - { name: doctrine.event_listener, event: prePersist }
+
+    app.user_therapy_listener:
+        class: AppBundle\EventListener\UserTherapyListener
+        tags:
+            - { name: doctrine.event_listener, event: prePersist }
+
+    app.therapy_session_listener:
+        class: AppBundle\EventListener\TherapySessionListener
+        tags:
+            - { name: doctrine.event_listener, event: onFlush }
+
+#    app.therapy_listener:
+#        class: AppBundle\EventListener\TherapyListener
+#        arguments: ['@doctrine.orm.entity_manager', '@app.therapy_service']
+#        tags:
+#            - { name: doctrine.event_listener, event: postUpdate }
+
+    # Service for HWIOAuthBundle to get user from db by resource provider
+    app.oauth_user_provider:
+#        class: HWI\Bundle\OAuthBundle\Security\Core\User\FOSUBUserProvider
+        class: AuthBundle\Security\Core\User\FOSUBUserProvider
+        arguments:
+            - '@fos_user.user_manager'
+            - {facebook: facebook_id, google: google_id}
+
+#    # Entity Listener resolver (http://egeloen.fr/2013/12/01/symfony2-doctrine2-entity-listener-as-serice/)
+#    app_bundle.doctrine.entity_listener_resolver:
+#        class: AppBundle\Doctrine\EntityListenerResolver
+#        arguments: [ "@service_container" ]
+#
+#    # Service for HWIOAuthBundle to get user from db by resource provider
+#    app.user_change_listener:
+#        class: AppBundle\EventListener\UserChangeListener
+#        arguments: ['@fos_user.user_manager', '@mailer', '@twig', '%default_from_email%', '%default_from_name%']
+#        tags:
+#            -  { name: doctrine.orm.entity_listener }
+
+
+
+#    nelmio_alice.faker.provider:
+#        class: AppBundle\DataFixtures\Faker\Provider

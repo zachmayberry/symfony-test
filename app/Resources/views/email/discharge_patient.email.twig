@@ -1,0 +1,23 @@
+{% block subject %}You have been discharged{% endblock %}
+
+{% block body_text %}
+{% autoescape false %}
+    Dear {{ user.getFirstname() }}
+
+    You have been discharged from your supervisors, so we changed your account to a normal user account.
+    You can still login with your credentials.
+
+    Be Well!
+    Your HealthTunes Support Team.
+
+    __________________________
+
+    HealthTunes
+    help@HealthTunes.org
+    Los Angeles, CA 90068
+{% endautoescape %}
+{% endblock %}
+
+{% block body_html %}
+    {% include 'email/discharge_patient.html.twig' %}
+{% endblock %}

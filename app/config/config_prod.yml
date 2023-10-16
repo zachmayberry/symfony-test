@@ -1,0 +1,42 @@
+imports:
+    - { resource: config.yml }
+
+#doctrine:
+#    orm:
+#        metadata_cache_driver: apc
+#        result_cache_driver: apc
+#        query_cache_driver: apc
+
+monolog:
+    handlers:
+        main:
+            type:         fingers_crossed
+            action_level: error
+            handler:      nested
+            channels: ["!api", "!api_slow", "!beat_api", "!convert_api"]
+        api:
+            type: stream
+            path: "%kernel.root_dir%/../var/logs/%kernel.environment%.api.watch.log"
+            #level: info
+            channels: ["api"]
+        api_slow:
+            type: stream
+            path: "%kernel.root_dir%/../var/logs/%kernel.environment%.api_slow.watch.log"
+            #level: info
+            channels: ["api_slow"]
+        beat_api:
+            type: stream
+            path: "%kernel.root_dir%/../var/logs/%kernel.environment%.beat_api.log"
+            level: info
+            channels: ["beat_api"]
+        convert_api:
+            type: stream
+            path: "%kernel.root_dir%/../var/logs/%kernel.environment%.convert_api.log"
+            level: info
+            channels: ["convert_api"]
+        nested:
+            type: stream
+            path:  "%kernel.root_dir%/../var/logs/%kernel.environment%.log"
+            level: debug
+        console:
+            type: console

@@ -1,0 +1,28 @@
+{% block subject %}Your new supervisors{% endblock %}
+
+{% block body_text %}
+{% autoescape false %}
+Dear {{ user.getFirstname() }}
+
+    {% if oldDogs and newDogs %}
+        Your supervisors have been changed. You are now supervised by {{ newDogs }}.
+    {% elseif newDogs %}
+        You are now supervised by {{ newDogs }}.
+    {% elseif oldDogs %}
+        You are no longer supervised by {{ oldDogs }}.
+    {% endif %}
+
+    Be Well!
+    Your HealthTunes Support Team.
+
+    __________________________
+
+    HealthTunes
+    help@HealthTunes.org
+    Los Angeles, CA 90068
+{% endautoescape %}
+{% endblock %}
+
+{% block body_html %}
+    {% include 'email/referred_patient.html.twig' %}
+{% endblock %}

@@ -1,0 +1,19 @@
+{
+  "name": "HealthTunes",
+  "description": "\"\"",
+  "main": "",
+  "authors": [
+    "Media Rocks"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {}
+}

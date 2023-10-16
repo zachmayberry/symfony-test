@@ -1,0 +1,23 @@
+{% block subject %}Your account has been disabled{% endblock %}
+
+{% block body_text %}
+{% autoescape false %}
+    Dear {{ user.getFirstname() }}
+
+    Your account at HealthTunes.org has been disabled.
+    For further information please contact us at info@HealthTunes.org.
+
+    Be Well!
+    Your HealthTunes Support Team.
+
+    __________________________
+
+    HealthTunes
+    help@HealthTunes.org
+    Los Angeles, CA 90068
+{% endautoescape %}
+{% endblock %}
+
+{% block body_html %}
+    {% include 'email/lock_user.html.twig' %}
+{% endblock %}

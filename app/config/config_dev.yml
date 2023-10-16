@@ -1,0 +1,49 @@
+imports:
+    - { resource: config.yml }
+
+framework:
+    router:
+        resource: "%kernel.root_dir%/config/routing_dev.yml"
+        strict_requirements: true
+    profiler: { only_exceptions: false }
+
+web_profiler:
+    toolbar: true
+    intercept_redirects: false
+
+monolog:
+    handlers:
+        main:
+            type: stream
+            path: "%kernel.logs_dir%/%kernel.environment%.log"
+            level: debug
+            channels: ["!event", "!beat_api", "!convert_api"]
+        api:
+            type: stream
+            path: "%kernel.logs_dir%/%kernel.environment%.api.watch.log"
+            level: info
+            channels: ["api"]
+        api_slow:
+            type: stream
+            path: "%kernel.logs_dir%/%kernel.environment%.api_slow.watch.log"
+            level: info
+            channels: ["api_slow"]
+        beat_api:
+            type: stream
+            path: "%kernel.logs_dir%/%kernel.environment%.beat_api.log"
+            level: info
+            channels: ["beat_api"]
+        convert_api:
+            type: stream
+            path: "%kernel.logs_dir%/%kernel.environment%.convert_api.log"
+            level: info
+            channels: [convert_api]
+        console:
+            type:   console
+            channels: ["!event", "!doctrine"]
+        # uncomment to get logging in your browser
+        # you may have to allow bigger header sizes in your Web server configuration
+        #firephp:
+        #    type:   firephp
+        #    level:  info
+

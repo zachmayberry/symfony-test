@@ -1,0 +1,45 @@
+{
+  "plugins": [
+    "react",
+    "import",
+    "jsx-control-statements"
+  ],
+  "extends": [
+    //"airbnb",
+    "plugin:jsx-control-statements/recommended"
+  ],
+  "parser": "babel-eslint",
+  "rules": {
+    "max-len": [1, 200, 2, {ignoreComments: true}],
+    "no-unused-vars": 0,
+    "no-unresolved": 0,
+    "jsx-control-statements/jsx-choose-not-empty": 1,
+    "jsx-control-statements/jsx-for-require-each": 1,
+    "jsx-control-statements/jsx-for-require-of": 1,
+    "jsx-control-statements/jsx-if-require-condition": 1,
+    "jsx-control-statements/jsx-otherwise-once-last": 1,
+    "jsx-control-statements/jsx-use-if-tag": 0,
+    "jsx-control-statements/jsx-when-require-condition": 1,
+    "jsx-control-statements/jsx-jcs-no-undef": 1,
+    //"quotes": 0,
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jquery": true,
+    "jsx-control-statements/jsx-control-statements": true
+  },
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "0.15.2"
+    },
+    "import/resolver": "webpack",
+    "import/parser": "babel-eslint"
+  },
+  "globals": {
+    "__GLOBALS__": true,
+    "dispatch": true,
+    "logger": true
+  }
+}

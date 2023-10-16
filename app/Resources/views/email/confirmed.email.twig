@@ -1,0 +1,23 @@
+{% block subject %}Your accound has been confirmed{% endblock %}
+
+{% block body_text %}
+{% autoescape false %}
+    Dear {{ user.getFirstname() }}
+
+    Your account at HealthTunes.org has been confirmed.
+    Welcome to our community.
+
+    Be Well!
+    Your HealthTunes Support Team.
+
+    __________________________
+
+    HealthTunes
+    help@HealthTunes.org
+    Los Angeles, CA 90068
+{% endautoescape %}
+{% endblock %}
+
+{% block body_html %}
+    {% include 'email/confirmed.html.twig' %}
+{% endblock %}

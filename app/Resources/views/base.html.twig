@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<!--
+
+Design & Development by Media Rocks GmbH. Visit us at www.mediarocks.de/en
+
+███╗   ███╗███████╗██████╗ ██╗ █████╗     ██████╗  ██████╗  ██████╗██╗  ██╗███████╗
+████╗ ████║██╔════╝██╔══██╗██║██╔══██╗    ██╔══██╗██╔═══██╗██╔════╝██║ ██╔╝██╔════╝
+██╔████╔██║█████╗  ██║  ██║██║███████║    ██████╔╝██║   ██║██║     █████╔╝ ███████╗
+██║╚██╔╝██║██╔══╝  ██║  ██║██║██╔══██║    ██╔══██╗██║   ██║██║     ██╔═██╗ ╚════██║
+██║ ╚═╝ ██║███████╗██████╔╝██║██║  ██║    ██║  ██║╚██████╔╝╚██████╗██║  ██╗███████║
+╚═╝     ╚═╝╚══════╝╚═════╝ ╚═╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝  ╚═════╝╚═╝  ╚═╝╚══════╝
+
+-->
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index,follow">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+
+        <meta property="fb:app_id" content="{{ fb_app_id }}"/>
+        <meta property="og:url" content="{{ og_url }}"/>
+        <meta property="og:type" content="{{ og_type }}"/>
+        <meta property="og:site_name" content="{{ og_siteName }}"/>
+        <meta property="og:title" content="{{ og_title }}"/>
+        <meta property="og:description" content="{{ og_description }}"/>
+        <meta property="og:image" content="{{ og_image }}"/>
+        {% if og_image_width %}<meta property="og:image:width" content="{{ og_image_width }}"/>
+        {% endif %}{% if og_image_height %}<meta property="og:image:height" content="{{ og_image_height }}"/>
+        {% endif %}
+
+        <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+
+        <title>{{ title }}</title>
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+        <link rel="manifest" href="/images/favicons/manifest.json">
+        <link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#51519f">
+        <meta name="apple-mobile-web-app-title" content="HealthTunes">
+        <meta name="application-name" content="HealthTunes">
+        <meta name="theme-color" content="#51519f">
+
+        {% block head %}
+            <style type="text/css">
+                html, body, div {
+                    display: block;
+                    margin: 0;
+                    padding: 0;
+                }
+                body {
+                    background: #5858a3;
+                }
+
+                .preloader {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    background: #5858a3;
+                    color: #fff;
+                    overflow: hidden;
+                }
+
+                .center {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    pointer-events: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .circle {
+                    border-radius: 50%;
+                    position: relative;
+                }
+
+                .circleOne {
+                    width: 72px;
+                    height: 72px;
+                    background: rgba(103, 103, 172, 1);
+                    animation: animationFrames ease-in-out 0.8s;
+                    animation-iteration-count: infinite;
+                    transform-origin: 50% 50%;
+                    animation-fill-mode: forwards; /*when the spec is finished*/
+                    -webkit-animation: animationFrames ease-in-out 0.8s;
+                    -webkit-animation-iteration-count: infinite;
+                    -webkit-transform-origin: 50% 50%;
+                    -webkit-animation-fill-mode: forwards; /*Chrome 16+, Safari 4+*/
+                }
+
+                .circleTwo {
+                    width: 106px;
+                    height: 106px;
+                    background: rgba(98, 98, 169, 1);
+                    animation: animationFrames ease-in-out 0.8s;
+                    animation-iteration-count: infinite;
+                    transform-origin: 50% 50%;
+                    animation-fill-mode: forwards; /*when the spec is finished*/
+                    animation-delay: 0.1s;
+                    -webkit-animation: animationFrames ease-in-out 0.8s;
+                    -webkit-animation-iteration-count: infinite;
+                    -webkit-transform-origin: 50% 50%;
+                    -webkit-animation-fill-mode: forwards; /*Chrome 16+, Safari 4+*/
+                    -webkit-animation-delay: 0.1s; /* Safari 4.0 - 8.0 */
+                }
+
+                .circleThree {
+                    width: 140px;
+                    height: 140px;
+                    background: rgba(93, 93, 166, 0.7);
+                    animation: animationFrames ease-in-out 0.8s;
+                    animation-iteration-count: infinite;
+                    transform-origin: 50% 50%;
+                    animation-fill-mode: forwards; /*when the spec is finished*/
+                    animation-delay: 0.2s;
+                    -webkit-animation: animationFrames ease-in-out 0.8s;
+                    -webkit-animation-iteration-count: infinite;
+                    -webkit-transform-origin: 50% 50%;
+                    -webkit-animation-fill-mode: forwards; /*Chrome 16+, Safari 4+*/
+                    -webkit-animation-delay: 0.2s; /* Safari 4.0 - 8.0 */
+                }
+
+                @keyframes animationFrames {
+                    0% {
+                        transform: scaleX(1.00) scaleY(1.00);
+                    }
+                    50% {
+                        transform: scaleX(1.50) scaleY(1.50);
+                    }
+                    100% {
+                        transform: scaleX(1.00) scaleY(1.00);
+                    }
+                }
+            </style>
+        {% endblock %}
+    </head>
+    <body>
+        {% block body %}
+            <div class="preloader" id="preloader">
+                <div class="center"
+                     style="left: 50%; transform: translate(-50%, 0%) matrix(1, 0, 0, 1, 0, 0);">
+                    <div class="circle circleThree"
+                         style="transform: matrix3d(0.576377, 0.830374, 0, 0, -0.830374, 0.576377, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);">
+                    </div>
+                </div>
+                <div class="center"
+                     style="left: 50%; transform: translate(-50%, 0%) matrix(1, 0, 0, 1, 0, 0);">
+                    <div class="circle circleTwo"
+                         style="transform: matrix3d(0.58063, 0.8365, 0, 0, -0.8365, 0.58063, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);">
+                    </div>
+                </div>
+                <div class="center"
+                     style="left: 50%; transform: translate(-50%, 0%) matrix(1, 0, 0, 1, 0, 0);">
+                    <div class="circle circleOne"
+                         style="transform: matrix3d(0.570215, 0.821496, 0, 0, -0.821496, 0.570215, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);">
+                    </div>
+                </div>
+            </div>
+            <div id="app">
+                <!-- REACT App will be rendered here! -->
+            </div>
+        {% endblock %}
+
+        {% block stylesheets %}
+            <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800" rel="stylesheet"
+                  property="stylesheet">
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" property="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" property="stylesheet">
+            {% if app.environment != 'dev' %}
+                <link rel="stylesheet" property="stylesheet" type="text/css" href="{{ asset('dist/' ~ client_css) }}">
+            {% endif %}
+        {% endblock %}
+
+        {% block javascripts %}
+            {% if app.environment == 'dev' %}
+                {#<script src="http://192.168.178.51:3000/static/client.js"></script>#}
+                <script src="http://127.0.0.1:3100/static/client.js"></script>
+                {#<script src="http://192.168.178.46:3000/static/client.js"></script>#}
+            {% else %}
+                <script src="{{ asset('dist/' ~ client_js) }}"></script>
+            {% endif %}
+        {% endblock %}
+
+        <script>
+          window.fbAsyncInit = function() {
+            FB.init({
+              appId            : {{ fb_app_id }},
+              autoLogAppEvents : true,
+              xfbml            : true,
+              version          : 'v2.10'
+            });
+            FB.AppEvents.logPageView();
+          };
+
+          (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));
+        </script>
+    </body>
+</html>

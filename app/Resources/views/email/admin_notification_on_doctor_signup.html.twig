@@ -1,0 +1,21 @@
+<br/>
+Hello Walter<br/>
+<br/>
+A new supervisor has signed up for HealthTunes.org:<br/>
+<br/>
+First name: {{ user.getFirstname() }}<br/>
+Last name: {{ user.getLastname() }}<br/>
+<br/>
+Hospital: {{ user.getHospitalName() }}<br/>
+Medical science: {{ user.getMedicalScienceName() }}<br/>
+<br/>
+Email: {{ user.getEmail() }}<br/>
+Phone: {{ user.getPhone() }}<br/>
+<br/>
+<strong>Please check for approval on <a href="{{ absolute_url('/') }}app/users">{{ absolute_url('/') }}app/users</a></strong><br/>
+<br/>
+__________________________<br/>
+<br/>
+<img src="{{ absolute_url(asset('images/logo-email.png')) }}" width="190" height="30" alt="HealthTunes 🎵"/><br/>
+help@HealthTunes.org<br/>
+Los Angeles, CA 90068<br/>

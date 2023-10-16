@@ -1,0 +1,34 @@
+#fos_oauth_server_token:
+#    resource: "@FOSOAuthServerBundle/Resources/config/routing/token.xml"
+
+#api_login_check:
+#    path: /api/login_check
+
+# Import JWT and HWIOAuthBundle routes
+auth:
+    resource: "@AuthBundle/Resources/config/routing.yml"
+    prefix:   /auth
+
+# Import API routes
+api:
+    resource: "@ApiBundle/Resources/config/routing.yml"
+    prefix:   /api
+
+# Import custom App routes
+app:
+    resource: "@AppBundle/Resources/config/routing.yml"
+
+NelmioApiDocBundle:
+    resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
+    prefix:   /doc/api
+
+# Import LiipImagineBundle routes for resolving image paths
+_liip_imagine:
+    resource: "@LiipImagineBundle/Resources/config/routing.xml"
+
+# Route everything else to index
+fallback:
+    path: /{url}
+    defaults: { _controller: AppBundle:Default:index, url: null }
+    requirements:
+        url: .*

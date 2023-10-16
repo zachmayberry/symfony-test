@@ -1,0 +1,104 @@
+app_user_api:
+    resource: "@ApiBundle/Controller/UserController.php"
+    type: rest
+
+app_user_custom_api:
+    resource: "@ApiBundle/Controller/UserCustomController.php"
+    type: annotation
+
+app_track_custom_api:
+    resource: "@ApiBundle/Controller/TrackCustomController.php"
+    type: annotation
+
+app_therapy_api:
+    resource: "@ApiBundle/Controller/TherapyController.php"
+    type: rest
+
+app_therapy_custom_api:
+    resource: "@ApiBundle/Controller/TherapyCustomController.php"
+    type: annotation
+
+app_temptherapy_api:
+    resource: "@ApiBundle/Controller/TempTherapyController.php"
+    type: rest
+
+app_therapysession_api:
+    resource: "@ApiBundle/Controller/TherapySessionController.php"
+    type: rest
+
+app_therapysession_custom_api:
+    resource: "@ApiBundle/Controller/TherapySessionCustomController.php"
+    type: annotation
+
+app_usertherapy_api:
+    resource: "@ApiBundle/Controller/UserTherapyController.php"
+    type: rest
+
+app_usertherapy_custom_api:
+    resource: "@ApiBundle/Controller/UserTherapyCustomController.php"
+    type: annotation
+
+app_artist_api:
+    resource: "@ApiBundle/Controller/ArtistController.php"
+    type: rest
+
+app_publisher_api:
+    resource: "@ApiBundle/Controller/PublisherController.php"
+    type: rest
+
+app_track_api:
+    resource: "@ApiBundle/Controller/TrackController.php"
+    type: rest
+
+app_category_api:
+    resource: "@ApiBundle/Controller/CategoryController.php"
+    type: rest
+
+app_genre_api:
+    resource: "@ApiBundle/Controller/GenreController.php"
+    type: rest
+
+app_symptom_api:
+    resource: "@ApiBundle/Controller/SymptomController.php"
+    type: rest
+
+app_therapyrecommendation_api:
+    resource: "@ApiBundle/Controller/TherapyRecommendationController.php"
+    type: rest
+
+app_news_api:
+    resource: "@ApiBundle/Controller/NewsController.php"
+    type: rest
+
+app_reference_api:
+    resource: "@ApiBundle/Controller/ReferenceController.php"
+    type: rest
+
+app_medicalscience_api:
+    resource: "@ApiBundle/Controller/MedicalScienceController.php"
+    type: rest
+
+app_favourite_therapy_api:
+    resource: "@ApiBundle/Controller/FavouriteTherapyController.php"
+    type:   rest
+
+app_playlist_api:
+    resource: "@ApiBundle/Controller/PlaylistController.php"
+    type:   rest
+
+app_hospital_api:
+    resource: "@ApiBundle/Controller/HospitalController.php"
+    type: rest
+
+app_tracklog_api:
+    resource: "@ApiBundle/Controller/TrackLogController.php"
+    type: rest
+
+app_activity_api:
+    resource: "@ApiBundle/Controller/ActivityController.php"
+    type: rest
+
+app_uploaded_audio_api:
+    resource: "@ApiBundle/Controller/UploadedAudioController.php"
+    type: rest
+

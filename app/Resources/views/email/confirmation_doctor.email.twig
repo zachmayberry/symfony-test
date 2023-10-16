@@ -1,0 +1,30 @@
+{% block subject %}Thank you for signing up on HealthTunes.org{% endblock %}
+
+{% block body_text %}
+{% autoescape false %}
+    Dear {{ user.getFirstname() }}
+
+    Welcome to HealthTunes! Our team is processing your registration as quickly as possible.
+
+    We recognize that waiting is no fun. Since supervisors are granted access to special features on HealthTunes.org we will get in touch with you as soon as possible to discuss further steps.
+
+    Please check your email for information on accessing HealthTunes.org (add noreply@HealthTunes.org into contacts to avoid spam filter).
+
+    Please help us provide you faster service by requesting registration one time only, to prevent duplicate requests/accounts.
+
+    Thank you for your patience.
+
+    Be Well!
+    Your HealthTunes Support Team.
+
+    __________________________
+
+    HealthTunes
+    help@HealthTunes.org
+    Los Angeles, CA 90068
+{% endautoescape %}
+{% endblock %}
+
+{% block body_html %}
+    {% include 'email/confirmation_doctor.html.twig' %}
+{% endblock %}

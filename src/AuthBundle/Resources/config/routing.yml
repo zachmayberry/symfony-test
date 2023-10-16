@@ -1,0 +1,80 @@
+# JWT Token routes
+security_register:
+    path:    /register
+    defaults: { _controller: AuthBundle:Auth:register }
+    requirements:
+        methods: POST
+
+security_login:
+    path:    /login
+    defaults: { _controller: AuthBundle:Auth:login }
+    requirements:
+        methods: POST
+
+security_oauth_login:
+    path:    /oauth/login
+    defaults: { _controller: AuthBundle:Auth:loginFromOAuthResponse }
+    requirements:
+        methods: POST
+
+security_refresh_token:
+    path:     /refresh_token
+    defaults: { _controller: gesdinet.jwtrefreshtoken:refresh }
+    requirements:
+        methods: POST
+
+security_confirm_token:
+    path:     /confirm
+    defaults: { _controller: AuthBundle:Auth:confirmAjax}
+    requirements:
+        methods: POST
+
+auth_registration_confirm:
+    path:     /confirm-signup/{email}/{token}
+    defaults: { _controller: AuthBundle:Auth:confirm}
+    requirements:
+        #userId: '\d+'
+        methods: GET
+
+auth_resetting_send_email:
+    path:     /resetting/send-email
+    defaults: { _controller: AuthBundle:Auth:requestPasswordReset }
+    requirements:
+        methods: POST
+
+auth_resetting_confirm:
+    path:     /resetting/reset
+    defaults: { _controller: AuthBundle:Auth:confirmResetPassword }
+    requirements:
+        methods: GET POST
+
+auth_change_password:
+    path:     /change-password
+    defaults: { _controller: AuthBundle:Auth:changePassword }
+    requirements:
+        methods: GET POST
+
+
+# Connect HWIOAuthBundle
+#hwi_oauth_redirect:
+#    resource: "@HWIOAuthBundle/Resources/config/routing/redirect.xml"
+#    prefix:   /login/
+#
+#hwi_oauth_connect:
+#    resource: "@HWIOAuthBundle/Resources/config/routing/connect.xml"
+#    prefix:   /connect/
+#
+#hwi_oauth_login:
+#    resource: "@HWIOAuthBundle/Resources/config/routing/login.xml"
+#    prefix:   /connect/
+
+
+# HWIOAuthBundle provider routes
+#facebook_login:
+#    path: /login/facebook
+
+#google_login:
+#    path: /google
+
+#linkedin_login:
+#    path: /login/check-linkedin

@@ -1,0 +1,137 @@
+security:
+    providers:
+        fos_userbundle:
+            id: fos_user.user_provider.username_email        # fos_user.user_provider.username_email does not seem to work (OAuth-spec related ("username + password") ?)
+
+    encoders:
+        FOS\UserBundle\Model\UserInterface: sha512
+
+    role_hierarchy:
+        ROLE_USER:          ~
+        ROLE_PATIENT:       ROLE_USER
+        ROLE_DOCTOR:        ROLE_PATIENT
+        ROLE_ADMIN:         ROLE_DOCTOR
+        ROLE_SUPER_ADMIN:   ROLE_ADMIN
+
+    firewalls:
+
+        # make sure that Symfony's development tools aren't blocked
+        dev:
+            pattern: ^/(_(profiler|wdt|error)|css|images|js)/
+            security: false
+
+#        api_doc:
+#            pattern: ^/doc/api
+#            security: false
+
+#        secured_area:
+#            anonymous: ~
+#            oauth:
+#                resource_owners:
+#                    facebook:           "/auth/login/check-facebook"
+#                    google:             "/auth/login/check-google"
+#                login_path:        security_login
+#                use_forward:       false
+#                failure_path:      security_login
+#
+#                oauth_user_provider:
+#                    service: app.oauth_user_provider
+
+        change_password:
+            pattern: ^/auth/change-password
+            anonymous: ~
+            stateless: true
+            lexik_jwt: ~
+
+        login:
+            pattern:  ^/auth
+#            logout: true
+            stateless: true
+            anonymous: ~
+            form_login:
+                provider: fos_userbundle
+                require_previous_session: false
+                username_parameter: email
+                password_parameter: password
+                success_handler: lexik_jwt_authentication.handler.authentication_success
+                failure_handler: lexik_jwt_authentication.handler.authentication_failure
+                # submit the login form here
+                check_path: security_login
+                 # the user is redirected here when they need to log in
+                login_path: /login
+                # if true, forward the user to the login form instead of redirecting
+                use_forward: false
+
+#            oauth:
+#                 # the user is redirected here when they need to log in
+#                login_path: /login
+#
+#                # submit the login form here
+#                check_path: security_login
+#
+#                require_previous_session: false
+#                success_handler: lexik_jwt_authentication.handler.authentication_success
+#                failure_handler: lexik_jwt_authentication.handler.authentication_failure
+#                failure_path:   /login
+#                oauth_user_provider:
+#                    service: app.oauth_user_provider
+#                resource_owners:
+#                    facebook:   "/auth/login/facebook"
+#                    google:     "/auth/login/o/google"
+
+        register:
+            pattern: ^/auth/register
+            anonymous: true
+            stateless: true
+
+        refresh_to:
+            pattern:  ^/auth/refresh_token
+            stateless: true
+            anonymous: true
+
+        api_callback:
+            pattern: ^/api-callback
+            anonymous: true
+            stateless: true
+
+        # Firewall for API
+        api:
+            pattern:   ^/api
+            anonymous: true # we may still want some endpoints to not require authentication
+            stateless: true # do not store the user in the session, That's perfect: we expect
+                            # the client to send a valid Authorization header on every request.
+            lexik_jwt: ~
+
+#            guard:
+#                authenticators:
+#                    - 'lexik_jwt_authentication.jwt_token_authenticator'
+
+        main:
+            pattern: ^/
+            anonymous: ~
+            stateless: true
+            lexik_jwt: ~
+
+    access_control:
+        - { path: ^/api-callback,           roles: IS_AUTHENTICATED_ANONYMOUSLY, methods: [POST] }
+
+        - { path: ^/auth/change-password,   roles: IS_AUTHENTICATED_FULLY }
+        - { path: ^/auth,                   roles: IS_AUTHENTICATED_ANONYMOUSLY }
+
+        # allow access to read almost all data (for search and so on...)
+#        - { path: ^/api/users,              roles: IS_AUTHENTICATED_ANONYMOUSLY, methods: [GET] }
+        - { path: ^/api/therapies,          roles: IS_AUTHENTICATED_ANONYMOUSLY, methods: [GET] }
+        - { path: ^/api/artists,            roles: IS_AUTHENTICATED_ANONYMOUSLY, methods: [GET] }
+        - { path: ^/api/categories,         roles: IS_AUTHENTICATED_ANONYMOUSLY, methods: [GET] }
+        - { path: ^/api/genres,             roles: IS_AUTHENTICATED_ANONYMOUSLY, methods: [GET] }
+        - { path: ^/api/hospitals,          roles: IS_AUTHENTICATED_ANONYMOUSLY, methods: [GET] }
+        - { path: ^/api/medialsciences,     roles: IS_AUTHENTICATED_ANONYMOUSLY, methods: [GET] }
+        - { path: ^/api/news,               roles: IS_AUTHENTICATED_ANONYMOUSLY, methods: [GET] }
+        - { path: ^/api/publishers,         roles: IS_AUTHENTICATED_ANONYMOUSLY, methods: [GET] }
+        - { path: ^/api/recommendations,    roles: IS_AUTHENTICATED_ANONYMOUSLY, methods: [GET] }
+        - { path: ^/api/references,         roles: IS_AUTHENTICATED_ANONYMOUSLY, methods: [GET] }
+        - { path: ^/api/symptoms,           roles: IS_AUTHENTICATED_ANONYMOUSLY, methods: [GET] }
+        - { path: ^/api/tracks,             roles: IS_AUTHENTICATED_ANONYMOUSLY, methods: [GET] }
+
+        - { path: ^/api,                    roles: IS_AUTHENTICATED_FULLY } # TODO: IS_AUTHENTICATED_FULLY when not testing
+#        - { path: ^/.*,                     roles: IS_AUTHENTICATED_ANONYMOUSLY }

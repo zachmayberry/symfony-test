@@ -1,0 +1,30 @@
+{% block subject %}New supervisor sign up at HealthTunes.org{% endblock %}
+
+{% block body_text %}
+{% autoescape false %}
+    Hello Walter
+
+    A new supervisor has signed up for HealthTunes.org:
+
+    First name: {{ user.getFirstname() }}
+    Last name: {{ user.getLastname() }}
+
+    Hospital: {{ user.getHospitalName() }}
+    Medical science: {{ user.getMedicalScienceName() }}
+
+    Email: {{ user.getEmail() }}
+    Phone: {{ user.getPhone() }}
+
+    Please check for approval on {{ absolute_url('/') }}app/users
+
+    __________________________
+
+    HealthTunes
+    help@HealthTunes.org
+    Los Angeles, CA 90068
+{% endautoescape %}
+{% endblock %}
+
+{% block body_html %}
+    {% include 'email/admin_notification_on_doctor_signup.html.twig' %}
+{% endblock %}

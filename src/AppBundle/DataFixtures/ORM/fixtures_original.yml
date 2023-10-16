@@ -1,0 +1,1418 @@
+
+
+AppBundle\Entity\Category:
+    category_1:
+        title: Alzheimer
+        #sorting: 1
+        symptoms: ['@symptom_dementia', '@symptom_sleepdifficulty', '@symptom_schizophrenia']
+    category_2:
+        title: Parkinsons
+        #sorting: 2
+        symptoms: ['@symptom_chronicpain', '@symptom_stutter', '@symptom_analgesic']
+    category_3:
+        title: Dialysis
+        #sorting: 3
+        symptoms: ['@symptom_antistress', '@symptom_insomnia', '@symptom_preandpostoperative']
+    category_4:
+        title: NICU
+        #sorting: 4
+        symptoms: ['@symptom_insomnia', '@symptom_relaxation', '@symptom_heartrate']
+    category_5:
+        title: Dyslexia
+        #sorting: 5
+        symptoms: ['@symptom_focus', '@symptom_learningdifficulties', '@symptom_creativity']
+    category_6:
+        title: Sleep Disorders
+        #sorting: 6
+        symptoms: ['@symptom_insomnia', '@symptom_relaxation', '@symptom_sleepdifficulty']
+    category_7:
+        title: Cognitive Behavioral
+        #sorting: 7
+        symptoms: ['@symptom_depression', '@symptom_phobia', '@symptom_stressrelief']
+    category_8:
+        title: Stress
+        #sorting: 8
+        symptoms: ['@symptom_stressrelief', '@symptom_relaxation', '@symptom_insomnia']
+    category_9:
+        title: Analgesic
+        #sorting: 9
+        symptoms: ['@symptom_painreduction', '@symptom_chronicpain', '@symptom_addiction']
+    category_10:
+        title: Focus
+        #sorting: 10
+        symptoms: ['@symptom_focus', '@symptom_learningdifficulties', '@symptom_creativity']
+    category_11:
+        title: Internal
+        #sorting: 11
+        symptoms: ['@symptom_painreduction', '@symptom_heartrate', '@symptom_chronicpain']
+    category_12:
+        title: Sleep
+        #sorting: 12
+        symptoms: ['@symptom_insomnia', '@symptom_sleepdifficulty', '@symptom_relaxation']
+    category_13:
+        title: Chemotherapy
+        #sorting: 13
+        symptoms: ['@symptom_relaxation', '@symptom_painreduction', '@symptom_preandpostoperative']
+
+
+AppBundle\Entity\Hospital:
+    hospital_1:
+        title: Demo Klinikum
+    hospital_2:
+        title: Mayo Clinic, Rochester, Minn.
+    hospital_3:
+        title: Cleveland Clinic
+    hospital_4:
+        title: Johns Hopkins Hospital, Baltimore
+    hospital_5:
+        title: Duke University Medical Center, Durham, N.C.
+    hospital_6:
+        title: Hospital of the University of Pennsylvania, Philadelphia
+    hospital_7:
+        title: University of Chicago Hospitals
+    hospital_8:
+        title: Ann Arbor
+    hospital_9:
+        title: Barnes-Jewish Hospital/Washington University, St. Louis
+    hospital_10:
+        title: Stanford Hospital and Clinics, Stanford, Calif.
+    hospital_10:
+        title: Massachusetts General Hospital, Boston
+
+
+AppBundle\Entity\Symptom:
+    symptom_addiction:
+        title: Addiction
+    symptom_adhd:
+        title: ADHD
+    symptom_alzheimer:
+        title: Alzheimer
+    symptom_analgesic:
+        title: Analgesic
+    symptom_antistress:
+        title: Anti Stress
+    symptom_anxiety:
+        title: Anxiety
+    symptom_autism:
+        title: Autism
+    symptom_arterialpressure:
+        title: Arterial Pressure
+    symptom_bloodpressure:
+        title: Blood Pressure
+    symptom_chronicpain:
+        title: Chronic Pain
+    symptom_circadian:
+        title: Circadian
+    symptom_cognitivebehavioral:
+        title: Cognitive Behavioral
+    symptom_concentration:
+        title: Concentration
+    symptom_creativity:
+        title: Creativity
+    symptom_dementia:
+        title: Dementia
+    symptom_depression:
+        title: Depression
+    symptom_diabtes:
+        title: Diabetes
+    symptom_dyslexia:
+        title: Dyslexia
+    symptom_epilepsy:
+        title: Epilepsy
+    symptom_focus:
+        title: Focus
+    symptom_heartrate:
+        title: Heart Rate
+    symptom_hippocampus:
+        title: Hippocampus
+    symptom_hrv:
+        title: HRV
+    symptom_increasememory:
+        title: Increase Memory
+    symptom_insomnia:
+        title: Insomnia
+    symptom_learningdifficulties:
+        title: Learning Difficulties
+    symptom_memoryenhancing:
+        title: Memory Enhancing
+    symptom_nervoussystem:
+        title: Nervous System
+    symptom_nicu:
+        title: NICU
+    symptom_painreduction:
+        title: Pain Reduction
+    symptom_parkinson:
+        title: Parkinson
+    symptom_phobia:
+        title: Phobia
+    symptom_preandpostoperative:
+        title: Pre and Post Operative
+    symptom_ptsd:
+        title: PTSD
+    symptom_relaxation:
+        title: Relaxation
+    symptom_sad:
+        title: SAD
+    symptom_schizophrenia:
+        title: Schizophrenia
+    symptom_seasonalaffectivedisorder:
+        title: Seasonal Affective Disorder
+    symptom_sleepdifficulty:
+        title: Sleep Difficulty
+    symptom_sleep:
+        title: Sleep
+    symptom_stressrelief:
+        title: Stress Relief
+    symptom_stutter:
+        title: Stutter
+    symptom_thalamus:
+        title: Thalamus
+    symptom_thyroid:
+        title: Thyroid
+    symptom_vigilance:
+        title: Vigilance
+
+
+AppBundle\Entity\Genre:
+    genre_1:
+        title: Alternative
+        createdAt: <datetimeBetween('-700 days', 'now')>
+    genre_2:
+        title: Blues
+        createdAt: <datetimeBetween('-700 days', 'now')>
+    genre_3:
+        title: Lullabies
+        createdAt: <datetimeBetween('-700 days', 'now')>
+    genre_4:
+        title: Classical
+        createdAt: <datetimeBetween('-700 days', 'now')>
+    genre_5:
+        title: Country
+        createdAt: <datetimeBetween('-700 days', 'now')>
+    genre_6:
+        title: Dance
+        createdAt: <datetimeBetween('-700 days', 'now')>
+    genre_7:
+        title: Easy Listening
+        createdAt: <datetimeBetween('-700 days', 'now')>
+    genre_8:
+        title: Electronic
+        createdAt: <datetimeBetween('-700 days', 'now')>
+    genre_9:
+        title: Hip-Hop/Rap
+        createdAt: <datetimeBetween('-700 days', 'now')>
+    genre_10:
+        title: Indie Pop
+        createdAt: <datetimeBetween('-700 days', 'now')>
+    genre_11:
+        title: March
+        createdAt: <datetimeBetween('-700 days', 'now')>
+    genre_12:
+        title: Jazz
+        createdAt: <datetimeBetween('-700 days', 'now')>
+    genre_13:
+        title: Latin
+        createdAt: <datetimeBetween('-700 days', 'now')>
+    genre_14:
+        title: Opera
+        createdAt: <datetimeBetween('-700 days', 'now')>
+    genre_15:
+        title: World
+        createdAt: <datetimeBetween('-700 days', 'now')>
+    genre_16:
+        title: Binaural
+        createdAt: <datetimeBetween('-700 days', 'now')>
+    genre_17:
+        title: Pop
+        createdAt: <datetimeBetween('-700 days', 'now')>
+    genre_18:
+         title: Enviro
+         createdAt: <datetimeBetween('-700 days', 'now')>
+    genre_19:
+        title: Monaural
+        createdAt: <datetimeBetween('-700 days', 'now')>
+    genre_20:
+        title: Isochronic
+        createdAt: <datetimeBetween('-700 days', 'now')>
+    genre_21:
+        title: Sinus
+        createdAt: <datetimeBetween('-700 days', 'now')>
+
+
+AppBundle\Entity\MedicalScience:
+    #medicalScience_{1..18}:
+    #    title: <medicalScience($current)>
+    #    createdAt: <datetimeBetween('-700 days', 'now')>
+    medicalScience_1:
+        title: aetiology
+        createdAt: <datetimeBetween('-700 days', 'now')>
+    medicalScience_2:
+        title: biomedicine
+        createdAt: <datetimeBetween('-700 days', 'now')>
+    medicalScience_3:
+        title: cytology
+        createdAt: <datetimeBetween('-700 days', 'now')>
+    medicalScience_4:
+        title: dentistry
+        createdAt: <datetimeBetween('-700 days', 'now')>
+    medicalScience_5:
+        title: epidemiology
+        createdAt: <datetimeBetween('-700 days', 'now')>
+    medicalScience_6:
+        title: genetics
+        createdAt: <datetimeBetween('-700 days', 'now')>
+    medicalScience_7:
+        title: haematology
+        createdAt: <datetimeBetween('-700 days', 'now')>
+    medicalScience_8:
+        title: immunology
+        createdAt: <datetimeBetween('-700 days', 'now')>
+    medicalScience_9:
+        title: medicine
+        createdAt: <datetimeBetween('-700 days', 'now')>
+    medicalScience_10:
+        title: neurology
+        createdAt: <datetimeBetween('-700 days', 'now')>
+    medicalScience_11:
+        title: ophthalmology
+        createdAt: <datetimeBetween('-700 days', 'now')>
+    medicalScience_12:
+        title: pathology
+        createdAt: <datetimeBetween('-700 days', 'now')>
+    medicalScience_13:
+        title: radiology
+        createdAt: <datetimeBetween('-700 days', 'now')>
+    medicalScience_14:
+        title: urology
+        createdAt: <datetimeBetween('-700 days', 'now')>
+    medicalScience_15:
+        title: virology
+        createdAt: <datetimeBetween('-700 days', 'now')>
+
+
+AppBundle\Entity\User:
+    #superadmin:
+    #    email: webmaster@mediarocks.de
+    #    username: webmaster@mediarocks.de
+    #    plainPassword: asdasdasd
+    #    firstname: Media
+    #    lastname: Rocks
+    #    phone: "08961468651"
+    #    hospital: Klinikum rechts der Isar
+    #    medicalScience: '@medicalScience_*'
+    #    gender: 1
+    #    type: 3
+    #    dob: <datetimeBetween('-68 years', '-24 years')>
+    #    roles: [ROLE_SUPER_ADMIN]
+    #    enabled: 1
+    #    profileImageFile: <uploadFile('admin', 0)>
+    admin_ww:
+        email: walter@healthtunes.org
+        username: walter@healthtunes.org
+        plainPassword: Password123!
+        firstname: Walter
+        lastname: Werzowa
+        phone: 0172123456789
+        Hospital: '@hospital_1'
+        medicalScience: '@medicalScience_*'
+        gender: 1
+        dob: <datetimeBetween('-68 years', '-24 years')>
+        type: 3
+        roles: [ROLE_ADMIN, ROLE_DOCTOR]
+        enabled: 1
+        profileImageFile: <uploadFile('admin', 2)>
+    admin_sb:
+        email: stefan@marble-madness.de
+        username: stefan@marble-madness.de
+        plainPassword: Password123!
+        firstname: Stefan
+        lastname: Boettjer
+        phone: 0172123456789
+        Hospital: '@hospital_1'
+        medicalScience: '@medicalScience_*'
+        gender: 1
+        dob: <datetimeBetween('-68 years', '-24 years')>
+        type: 3
+        roles: [ROLE_ADMIN, ROLE_DOCTOR]
+        enabled: 1
+        profileImageFile: <uploadFile('admin', 3)>
+    admin_ta:
+        email: thomas.arlt@applied-math.com
+        username: thomas.arlt@applied-math.com
+        plainPassword: Password123!
+        firstname: Thomas
+        lastname: Arlt
+        phone: 0172123456789
+        Hospital: '@hospital_1'
+        medicalScience: '@medicalScience_*'
+        gender: 1
+        dob: <datetimeBetween('-68 years', '-24 years')>
+        type: 3
+        roles: [ROLE_ADMIN, ROLE_DOCTOR]
+        enabled: 1
+        profileImageFile: <uploadFile('admin', 5)>
+    admin_ah:
+        email: admin@healthtunes.org
+        username: admin@healthtunes.org
+        plainPassword: Password123!
+        firstname: Austin
+        lastname: Hagen
+        phone: 0172123456789
+        Hospital: '@hospital_1'
+        medicalScience: '@medicalScience_*'
+        gender: 1
+        dob: <datetimeBetween('-68 years', '-24 years')>
+        type: 3
+        roles: [ROLE_ADMIN, ROLE_DOCTOR]
+        enabled: 1
+        profileImageFile: <uploadFile('admin', 6)>
+    admin_as:
+        email: as@mediarocks.de
+        username: as@mediarocks.de
+        plainPassword: Password123!
+        firstname: Aryan
+        lastname: Sheikholmolouki
+        phone: 017631335066
+        Hospital: '@hospital_1'
+        medicalScience: '@medicalScience_*'
+        gender: 1
+        dob: <datetimeBetween('-68 years', '-24 years')>
+        type: 3
+        roles: [ROLE_ADMIN, ROLE_DOCTOR]
+        enabled: 1
+        profileImageFile: <uploadFile('admin', 4)>
+    admin_lh:
+        email: lh@mediarocks.de
+        username: lh@mediarocks.de
+        plainPassword: asdasdasd
+        firstname: Lorenz
+        lastname: Haase
+        phone: 017620532079
+        Hospital: '@hospital_1'
+        medicalScience: '@medicalScience_*'
+        gender: 1
+        dob: <datetimeBetween('-68 years', '-24 years')>
+        type: 3
+        roles: [ROLE_ADMIN, ROLE_DOCTOR]
+        enabled: 1
+        profileImageFile: <uploadFile('admin', 1)>
+    doctor_{1..5}:
+        email: <email()>
+        username: <email()>
+        plainPassword: asdasdasd
+        title: Dr.
+        firstname: <firstName()>
+        lastname: <lastName()>
+        phone: <phone()>
+        Hospital: '@hospital_*'
+        medicalScience: '@medicalScience_*'
+        gender: <numberBetween(1,2)>
+        dob: <datetimeBetween('-68 years', '-24 years')>
+        type: 2
+        roles: [ROLE_DOCTOR]
+        country: <country()>
+        zipcode: <zipCode()>
+        location: <location()>
+        enabled: 1
+        profileImageFile: <uploadFile('doctor')>
+    patient_{1..10}:
+        email: <email()>
+        username: <email()>
+        plainPassword: asdasdasd
+        firstname: <firstName()>
+        lastname: <lastName()>
+        phone: 70%? <phone()>
+        Hospital: '@hospital_*'
+        gender: <numberBetween(1,3)>
+        dob: <datetimeBetween('-90 years', '-1 years')>
+        type: 1
+        roles: [ROLE_PATIENT]
+        country: <country()>
+        zipcode: <zipCode()>
+        location: <location()>
+        enabled: 1
+        doctors: ['@doctor_*']
+        disease: <disease()>
+        profileImageFile: 80%? <uploadFile('user')>
+    user_{1..10}:
+        email: <email()>
+        username: <email()>
+        plainPassword: asdasdasd
+        firstname: <firstName()>
+        lastname: <lastName()>
+        phone: 70%? <phone()>
+        country: <country()>
+        zipcode: <zipCode()>
+        location: <location()>
+        gender: <numberBetween(1,3)>
+        dob: <datetimeBetween('-90 years', '-1 years')>
+        type: 0
+        roles: [ROLE_USER]
+        enabled: 90%? 1
+        profileImageFile: 80%? <uploadFile('user')>
+
+
+AppBundle\Entity\News:
+    news_{1..25}:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        title: <therapy()>
+        teaser: <text(150)>
+        content: <text(1500)>
+#        link: 70%? <externalLinks()>
+        date: <datetimeBetween('-700 days', '+5 days')>
+        Hidden: 10%? 1
+        public: 60%? 1
+        user: '@user_*'
+        imageFile: <uploadFile('news')>
+
+
+AppBundle\Entity\Reference:
+    reference_{1..25}:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        category: <numberBetween(1,2)>
+        title: <reference()>
+        teaser: <text(150)>
+        link: <externalLinks()>
+        date: <datetimeBetween('-700 days', '+5 days')>
+        Hidden: 10%? 1
+        imageFile: <uploadFile('reference')>
+
+
+AppBundle\Entity\Artist:
+    artist_walter:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        name: Walter Werzowa
+        imageFile: <uploadFile('artistPic', 20)>
+    artist_bmi:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        name: BMI
+        imageFile: <uploadFile('artistPic', 20)>
+    artist_strauss:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        name: Johann Strauss
+        imageFile: <uploadFile('artistPic', 16)>
+    artist_strauss2:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        name: Josef Strauss
+        imageFile: <uploadFile('artistPic', 17)>
+    artist_ludwig:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        name: Ludwig van Beethoven
+        imageFile: <uploadFile('artistPic', 11)>
+    artist_fun:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        name: fun.
+        imageFile: <uploadFile('artistPic', 4)>
+    artist_adele:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        name: Adele
+        imageFile: <uploadFile('artistPic', 21)>
+    artist_kesha:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        name: Ke$ha
+        imageFile: <uploadFile('artistPic', 8)>
+    artist_MacklemoreLewis:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        name: Macklemore & Ryan Lewis
+        imageFile: <uploadFile('artistPic', 12)>
+    artist_gotye:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        name: Gotye
+        imageFile: <uploadFile('artistPic', 5)>
+    artist_imagineDragons:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        name: Imagine Dragons
+        imageFile: <uploadFile('artistPic', 6)>
+    artist_maroon:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        name: Maroon 5
+        imageFile: <uploadFile('artistPic', 13)>
+    artist_lmfao:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        name: Lmfao
+        imageFile: <uploadFile('artistPic', 10)>
+    artist_usher:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        name: Usher
+        imageFile: <uploadFile('artistPic', 19)>
+    artist_bob:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        name: B.O.B.
+        imageFile: <uploadFile('artistPic', 1)>
+    artist_ladyAntebellum:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        name: Lady Antebellum
+        imageFile: <uploadFile('artistPic', 9)>
+    artist_ellie:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        name: Ellie Goulding
+        imageFile: <uploadFile('artistPic', 3)>
+    artist_train:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        name: Train
+        imageFile: <uploadFile('artistPic', 18)>
+    artist_pitbull:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        name: Pitbull feat. NeYo, Afrojack and Nayer
+        imageFile: <uploadFile('artistPic', 14)>
+    artist_katy:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        name: Katy Perry
+        imageFile: <uploadFile('artistPic', 7)>
+    artist_carly:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        name: Carly Rae Jepsen
+        imageFile: <uploadFile('artistPic', 2)>
+    artist_robin:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        name: Robin Thicke
+        imageFile: <uploadFile('artistPic', 15)>
+
+
+AppBundle\Entity\Publisher:
+    publisher_htp:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        name: HEALINGTUNES PUBLISHING
+    publisher_bmi:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        name: BMI
+    publisher_sony:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        name: SONY BMG
+
+
+AppBundle\Entity\Track:
+    TONE_1:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 1
+        toneType: bBeat
+        title: A 27Hz+1.5Hz
+        artist: '@artist_walter'
+        composers: ['@artist_walter', '@artist_bmi']
+        publishers: ['@publisher_bmi', '@publisher_htp']
+        moods: Self
+        genre: '@genre_16'
+        dosage: 20 mins/Day minimum
+        therapyLength: 30 Day Cycles
+        recommendations: []
+        description: delta wave, relaxing, meditation, reciprocal,  Field of Expression, throat, G, turquoise, communication, neck, jaw, 432 Tuning
+        symptoms: ['@symptom_learningdifficulties', '@symptom_adhd', '@symptom_epilepsy', '@symptom_autism', '@symptom_depression', '@symptom_focus', '@symptom_vigilance']
+        fLeft: 55.5
+        fRight: 54
+        ampValue: 0.5
+        ampMod: automatic
+        includesHq: true
+        fLeftHq: 28.5
+        fRightHq: 27
+        ampValueHq: 0.5
+        ampModHq: automatic
+    TONE_2:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 1
+        toneType: bBeat
+        title: A 27Hz+14Hz
+        artist: '@artist_walter'
+        composers: ['@artist_walter', '@artist_bmi']
+        publishers: ['@publisher_bmi', '@publisher_htp']
+        moods: Self
+        genre: '@genre_16'
+        dosage: 20 mins/Day minimum
+        therapyLength: 30 Day Cycles
+        recommendations: []
+        description: beta wave, relaxing, meditation, reciprocal, Field of Intellect, Eye, A, indigo, self evaluation, brain, left eye, 432 Tuning
+        symptoms: ['@symptom_learningdifficulties', '@symptom_adhd', '@symptom_epilepsy', '@symptom_autism', '@symptom_depression', '@symptom_focus', '@symptom_vigilance']
+        fLeft: 68
+        fRight: 54
+        ampValue: 0.5
+        ampMod: automatic
+        includesHq: true
+        fLeftHq: 41
+        fRightHq: 27
+        ampValueHq: 0.5
+        ampModHq: automatic
+    TONE_3:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 1
+        toneType: bBeat
+        title: A 27Hz+23.5Hz
+        artist: '@artist_walter'
+        composers: ['@artist_walter', '@artist_bmi']
+        publishers: ['@publisher_bmi', '@publisher_htp']
+        moods: Self
+        genre: '@genre_16'
+        dosage: 20 mins/Day minimum
+        therapyLength: 30 Day Cycles
+        recommendations: []
+        description: beta wave, busy, active, Field of Intellect, Eye, A, indigo, self evaluation, brain, left eye, 432 Tuning
+        symptoms: ['@symptom_cognitivebehavioral', '@symptom_concentration']
+        fLeft: 77.5
+        fRight: 54
+        ampValue: 0.5
+        ampMod: automatic
+        includesHq: true
+        fLeftHq: 50.5
+        fRightHq: 27
+        ampValueHq: 0.5
+        ampModHq: automatic
+    TONE_4:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 1
+        toneType: bBeat
+        title: A 27Hz+34Hz
+        artist: '@artist_walter'
+        composers: ['@artist_walter', '@artist_bmi']
+        publishers: ['@publisher_bmi', '@publisher_htp']
+        moods: Self
+        genre: '@genre_16'
+        dosage: 20 mins/Day minimum
+        therapyLength: 30 Day Cycles
+        recommendations: []
+        description: beta wave, visual context, dreaming, conscious attention, transcendental, Field of Intellect, Eye, A, indigo, self evaluation, brain, left eye, 432 Tuning
+        symptoms: ['@symptom_cognitivebehavioral', '@symptom_creativity']
+        fLeft: 89
+        fRight: 54
+        ampValue: 0.5
+        ampMod: automatic
+        includesHq: true
+        fLeftHq: 61
+        fRightHq: 27
+        ampValueHq: 0.5
+        ampModHq: automatic
+    TONE_5:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 1
+        toneType: bBeat
+        title: A 27Hz+40Hz
+        artist: '@artist_walter'
+        composers: ['@artist_walter', '@artist_bmi']
+        publishers: ['@publisher_bmi', '@publisher_htp']
+        moods: Self
+        genre: '@genre_16'
+        dosage: 20 mins/Day minimum
+        therapyLength: 30 Day Cycles
+        recommendations: []
+        description: gamma wave, syncing brain waves, Field of Intellect, Eye, A, indigo, self evaluation, brain, left eye, 432 Tuning
+        symptoms: ['@symptom_cognitivebehavioral']
+        fLeft: 94
+        fRight: 54
+        ampValue: 0.5
+        ampMod: automatic
+        includesHq: true
+        fLeftHq: 67
+        fRightHq: 27
+        ampValueHq: 0.5
+        ampModHq: automatic
+    TONE_6:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 1
+        toneType: bBeat
+        title: B 30.30648Hz+6Hz
+        artist: '@artist_walter'
+        composers: ['@artist_walter', '@artist_bmi']
+        publishers: ['@publisher_bmi', '@publisher_htp']
+        moods:
+        genre: '@genre_16'
+        dosage: 20 mins/Day minimum
+        therapyLength: 30 Day Cycles
+        recommendations: []
+        description: theta wave, 432 Tuning
+        symptoms: ['@symptom_analgesic', '@symptom_painreduction', '@symptom_increasememory', '@symptom_parkinson', '@symptom_chronicpain']
+        fLeft: 66.612
+        fRight: 60.612
+        ampValue: 0.5
+        ampMod: automatic
+        includesHq: true
+        fLeftHq: 36.30648
+        fRightHq: 30.30648
+        ampValueHq: 0.5
+        ampModHq: automatic
+    TONE_7:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 1
+        toneType: bBeat
+        title: B 30.306Hz+14.3Hz
+        artist: '@artist_walter'
+        composers: ['@artist_walter', '@artist_bmi']
+        publishers: ['@publisher_bmi', '@publisher_htp']
+        moods:
+        genre: '@genre_16'
+        dosage: 20 mins/Day minimum
+        therapyLength: 30 Day Cycles
+        recommendations: []
+        description: beta wave, Schumann Resonance, Vigilance, 432 Tuning
+        symptoms: ['@symptom_hrv', '@symptom_sleep', '@symptom_insomnia', '@symptom_depression', '@symptom_bloodpressure', '@symptom_heartrate', '@symptom_arterialpressure', '@symptom_focus']
+        fLeft: 74.912
+        fRight: 60.612
+        ampValue: 0.5
+        ampMod: automatic
+        includesHq: true
+        fLeftHq: 44.606
+        fRightHq: 30.306
+        ampValueHq: 0.5
+        ampModHq: automatic
+    TONE_8:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 1
+        toneType: bBeat
+        title: B 30.306Hz+20.8Hz
+        artist: '@artist_walter'
+        composers: ['@artist_walter', '@artist_bmi']
+        publishers: ['@publisher_bmi', '@publisher_htp']
+        moods:
+        genre: '@genre_16'
+        dosage: 20 mins/Day minimum
+        therapyLength: 30 Day Cycles
+        recommendations: []
+        description: beta wave, Schumann Resonance, 432 Tuning
+        symptoms: ['@symptom_hrv', '@symptom_depression', '@symptom_bloodpressure', '@symptom_heartrate', '@symptom_arterialpressure']
+        fLeft: 81.412
+        fRight: 60.612
+        ampValue: 0.5
+        ampMod: automatic
+        includesHq: true
+        fLeftHq: 51.106
+        fRightHq: 30.306
+        ampValueHq: 0.5
+        ampModHq: automatic
+    TONE_9:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 1
+        toneType: bBeat
+        title: B 30.306Hz+33.8Hz
+        artist: '@artist_walter'
+        composers: ['@artist_walter', '@artist_bmi']
+        publishers: ['@publisher_bmi', '@publisher_htp']
+        moods:
+        genre: '@genre_16'
+        dosage: 20 mins/Day minimum
+        therapyLength: 30 Day Cycles
+        recommendations: []
+        description: beta wave, Schumann Resonance, 432 Tuning
+        symptoms: ['@symptom_hrv', '@symptom_bloodpressure', '@symptom_heartrate', '@symptom_arterialpressure', '@symptom_creativity']
+        fLeft: 94.412
+        fRight: 60.612
+        ampValue: 0.5
+        ampMod: automatic
+        includesHq: true
+        fLeftHq: 64.106
+        fRightHq: 30.306
+        ampValueHq: 0.5
+        ampModHq: automatic
+    TONE_10:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 1
+        toneType: bBeat
+        title: B 30.306Hz+1.5Hz
+        artist: '@artist_walter'
+        composers: ['@artist_walter', '@artist_bmi']
+        publishers: ['@publisher_bmi', '@publisher_htp']
+        moods: consciousness
+        genre: '@genre_16'
+        dosage: 20 mins/Day minimum
+        therapyLength: 30 Day Cycles
+        recommendations: []
+        description: delta wave, moving, Field of Awareness, crown, B, violet, ethics, consciousness, right eye, 432 Tuning
+        symptoms: ['@symptom_hippocampus', '@symptom_epilepsy', '@symptom_nervoussystem']
+        fLeft: 62.112
+        fRight: 60.612
+        ampValue: 0.5
+        ampMod: automatic
+        includesHq: true
+        fLeftHq: 31.806
+        fRightHq: 30.306
+        ampValueHq: 0.5
+        ampModHq: 0.5
+    TONE_11:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 1
+        toneType: isochronic
+        title: Isochronic A 14.3Hz
+        artist: '@artist_walter'
+        composers: ['@artist_walter', '@artist_bmi']
+        publishers: ['@publisher_bmi', '@publisher_htp']
+        moods:
+        genre: '@genre_20'
+        dosage: 20 mins/Day minimum
+        therapyLength: 30 Day Cycles
+        recommendations: []
+        description: beta wave, blood pressure, Heart rate, arterial pressure, Schumann Resonance, Vigilance, Focus, 432 Tuning
+        symptoms: ['@symptom_hrv', '@symptom_sleep', '@symptom_insomnia', '@symptom_depression']
+        fLeft: 14.3
+        fRight: 54
+        ampValue: 0.5
+        ampMod: 0.5
+        includesHq: false
+    TONE_12:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 1
+        toneType: isochronic
+        title: Isochronic A 20.8Hz
+        artist: '@artist_walter'
+        composers: ['@artist_walter', '@artist_bmi']
+        publishers: ['@publisher_bmi', '@publisher_htp']
+        moods:
+        genre: '@genre_20'
+        dosage: 20 mins/Day minimum
+        therapyLength: 30 Day Cycles
+        recommendations: []
+        description: beta wave, blood pressure, Heart rate, arterial pressure, Schumann Resonance, 432 Tuning
+        symptoms: ['@symptom_hrv', '@symptom_depression']
+        fLeft: 20.8
+        fRight: 54
+        ampValue: 0.5
+        ampMod: 0.5
+        includesHq: false
+    TONE_13:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 1
+        toneType: isochronic
+        title: Isochronic A 33.8 Hz
+        artist: '@artist_walter'
+        composers: ['@artist_walter', '@artist_bmi']
+        publishers: ['@publisher_bmi', '@publisher_htp']
+        moods:
+        genre: '@genre_20'
+        dosage: 20 mins/Day minimum
+        therapyLength: 30 Day Cycles
+        recommendations: []
+        description: beta wave, blood pressure, Heart rate, arterial pressure, Schumann Resonance, Creativity, 432 Tuning
+        symptoms: ['@symptom_hrv', '@symptom_bloodpressure']
+        fLeft: 33.8
+        fRight: 54
+        ampValue: 0.5
+        ampMod: 0.5
+        includesHq: false
+    TONE_14:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 1
+        toneType: isochronic
+        title: Isochronic A 7.83 Hz
+        artist: '@artist_walter'
+        composers: ['@artist_walter', '@artist_bmi']
+        publishers: ['@publisher_bmi', '@publisher_htp']
+        moods:
+        genre: '@genre_20'
+        dosage: 20 mins/Day minimum
+        therapyLength: 30 Day Cycles
+        recommendations: []
+        description: theta wave, blood pressure, Heart rate, arterial pressure, Schumann Resonance, Creativity, 432 Tuning
+        symptoms: ['@symptom_hrv', '@symptom_sleep', '@symptom_insomnia']
+        fLeft: 7.38
+        fRight: 54
+        ampValue: 0.5
+        ampMod: 0.5
+        includesHq: false
+    TONE_15:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 1
+        toneType: isochronic
+        title: Isochronic B 0.25Hz
+        artist: '@artist_walter'
+        composers: ['@artist_walter', '@artist_bmi']
+        publishers: ['@publisher_bmi', '@publisher_htp']
+        moods:
+        genre: '@genre_20'
+        dosage: 20 mins/Day minimum
+        therapyLength: 30 Day Cycles
+        recommendations: ['@recommendation_3', '@recommendation_4']
+        description: Falling Asleep Assistance, 432 Tuning
+        symptoms: ['@symptom_sleepdifficulty', '@symptom_insomnia']
+        fLeft: 25
+        fRight: 60.612
+        ampValue: 0.5
+        ampMod: 0.5
+        includesHq: false
+
+    HEAL108_1:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 3
+        title: Radetzky March
+        artist: '@artist_strauss'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL108', 0)>
+        includesHq: true
+        genre: '@genre_11'
+    HEAL108_2:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 3
+        title: Where The Lemons Bloom
+        artist: '@artist_strauss'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL108', 1)>
+        includesHq: true
+        genre: '@genre_11'
+    HEAL108_3:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 3
+        title: Voices of Spring Waltz
+        artist: '@artist_strauss'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL108', 2)>
+        includesHq: true
+        genre: '@genre_11'
+    HEAL108_4:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 3
+        title: Village Swallows Waltz
+        artist: '@artist_strauss2'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL108', 3)>
+        includesHq: true
+        genre: '@genre_11'
+    HEAL108_5:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 3
+        title: Vienna Blood Waltz
+        artist: '@artist_strauss'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL108', 4)>
+        includesHq: true
+        genre: '@genre_11'
+    HEAL108_6:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 3
+        title: March from Gypsy Baron
+        artist: '@artist_strauss'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL108', 5)>
+        includesHq: true
+        genre: '@genre_11'
+    HEAL108_7:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 3
+        title: Eljen A. Magyar Polka
+        artist: '@artist_strauss'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL108', 6)>
+        includesHq: true
+        genre: '@genre_11'
+
+    HEAL111_1:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 3
+        title: Symphony No. 7 in A Major, Op. 92 II. Allegretto
+        artist: '@artist_ludwig'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL111', 0)>
+        includesHq: true
+        genre: '@genre_4'
+    HEAL111_2:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 3
+        title: Symphony No. 9 in D Minor, Op. 125 Choral IV. Presto Allegro
+        artist: '@artist_ludwig'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL111', 1)>
+        includesHq: true
+        genre: '@genre_4'
+    HEAL111_3:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 3
+        title: Symphony No. 6 in F Major, Op. 68 Pastoral I. Allegro Ma Non
+        artist: '@artist_ludwig'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL111', 2)>
+        includesHq: true
+        genre: '@genre_4'
+    HEAL111_4:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 3
+        title: Symphony No. 4 Adagio
+        artist: '@artist_ludwig'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL111', 3)>
+        includesHq: true
+        genre: '@genre_4'
+    HEAL111_5:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 3
+        title: Symphony No. 3 in E-Flat Major, Op. 55 Eroica II. Marcia Fune
+        artist: '@artist_ludwig'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL111', 4)>
+        includesHq: true
+        genre: '@genre_4'
+    HEAL111_6:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 3
+        title: Symphony No. 5 in C Minor Op 67, 1. Allegro con brio
+        artist: '@artist_ludwig'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL111', 5)>
+        includesHq: true
+        genre: '@genre_4'
+    HEAL111_7:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 3
+        title: Sonata No. 7 in C Minor for Violin and Piano, Op. 30 II. Adagio
+        artist: '@artist_ludwig'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL111', 6)>
+        includesHq: true
+        genre: '@genre_4'
+    HEAL111_8:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 3
+        title: Rondo Allegro
+        artist: '@artist_ludwig'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL111', 7)>
+        includesHq: true
+        genre: '@genre_4'
+    HEAL111_9:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 3
+        title: Romance No. 2 in F Major for Violin and Orchstra, Op. 50
+        artist: '@artist_ludwig'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL111', 8)>
+        includesHq: true
+        genre: '@genre_4'
+    HEAL111_10:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 3
+        title: Piano Sonata No. 28 in A Major, Op. 101, 1
+        artist: '@artist_ludwig'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL111', 9)>
+        includesHq: true
+        genre: '@genre_4'
+    HEAL111_11:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 3
+        title: Pathetique Sonata - Adagio Cantabile
+        artist: '@artist_ludwig'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL111', 10)>
+        includesHq: true
+        genre: '@genre_4'
+    HEAL111_12:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 3
+        title: Missa Solemnis in D Major, Op. 123 III. Credo
+        artist: '@artist_ludwig'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL111', 11)>
+        includesHq: true
+        genre: '@genre_4'
+    HEAL111_13:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 3
+        title: Concerto for Piano and Orchestra, No. 6, Op. 61 Larghetto
+        artist: '@artist_ludwig'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL111', 12)>
+        includesHq: true
+        genre: '@genre_4'
+    HEAL111_14:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 3
+        title: Beethoven Piano Concerto 5 in E Flat, Op. 73, Emperor - 2.A
+        artist: '@artist_ludwig'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL111', 13)>
+        includesHq: true
+        genre: '@genre_4'
+
+    HEAL500_1:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 2
+        title: Underwater 1
+        artist: '@artist_walter'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL500', 0)>
+        includesHq: false
+        genre: '@genre_18'
+    HEAL500_2:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 2
+        title: Underwater 2
+        artist: '@artist_walter'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL500', 1)>
+        includesHq: false
+        genre: '@genre_18'
+    HEAL500_3:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 2
+        title: Underwater 3
+        artist: '@artist_walter'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL500', 2)>
+        includesHq: false
+        genre: '@genre_18'
+    HEAL500_4:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 2
+        title: Waves 1
+        artist: '@artist_walter'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL500', 3)>
+        includesHq: false
+        genre: '@genre_18'
+    HEAL500_5:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 2
+        title: Waves 2
+        artist: '@artist_walter'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL500', 4)>
+        includesHq: false
+        genre: '@genre_18'
+    HEAL500_6:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 2
+        title: Waves 3
+        artist: '@artist_walter'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL500', 5)>
+        includesHq: false
+        genre: '@genre_18'
+    HEAL500_7:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 2
+        title: Waves 4
+        artist: '@artist_walter'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL500', 6)>
+        includesHq: false
+        genre: '@genre_18'
+    HEAL500_8:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 2
+        title: Wind 1
+        artist: '@artist_walter'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL500', 7)>
+        includesHq: true
+        genre: '@genre_18'
+    HEAL500_9:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 2
+        title: Wind 2
+        artist: '@artist_walter'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL500', 8)>
+        includesHq: true
+        genre: '@genre_18'
+    HEAL500_10:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 2
+        title: Wind 3
+        artist: '@artist_walter'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL500', 9)>
+        includesHq: true
+        genre: '@genre_18'
+    HEAL500_11:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 2
+        title: Wind 4
+        artist: '@artist_walter'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL500', 10)>
+        includesHq: true
+        genre: '@genre_18'
+    HEAL500_12:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 2
+        title: Rain 1
+        artist: '@artist_walter'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL500', 11)>
+        includesHq: true
+        genre: '@genre_18'
+
+    HEAL210_1:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 3
+        title: We Are Young (feat. Janelle Monae)
+        artist: '@artist_fun'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL210', 0)>
+        includesHq: true
+        genre: '@genre_17'
+    HEAL210_2:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 3
+        title: Rolling In The Deep
+        artist: '@artist_adele'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL210', 1)>
+        includesHq: true
+        genre: '@genre_17'
+    HEAL210_3:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 3
+        title: Tik Tok
+        artist: '@artist_kesha'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL210', 2)>
+        includesHq: true
+        genre: '@genre_17'
+    HEAL210_4:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 3
+        title: Thrift Shop (feat. Wanz)
+        artist: '@artist_MacklemoreLewis'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL210', 3)>
+        includesHq: true
+        genre: '@genre_17'
+    HEAL210_5:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 3
+        title: Somebody That I Used to Know (feat. Kimbra)
+        artist: '@artist_gotye'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL210', 4)>
+        includesHq: true
+        genre: '@genre_17'
+    HEAL210_6:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 3
+        title: Radioactive
+        artist: '@artist_imagineDragons'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL210', 5)>
+        includesHq: true
+        genre: '@genre_17'
+    HEAL210_7:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 3
+        title: Payphone (feat. Wiz Khalifa)
+        artist: '@artist_maroon'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL210', 6)>
+        includesHq: true
+        genre: '@genre_17'
+    HEAL210_8:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 3
+        title: Party Rock Anthem
+        artist: '@artist_lmfao'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL210', 7)>
+        includesHq: true
+        genre: '@genre_17'
+    HEAL210_9:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 3
+        title: OMG feat. Will.i.am
+        artist: '@artist_usher'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL210', 8)>
+        includesHq: true
+        genre: '@genre_17'
+    HEAL210_10:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 3
+        title: Nothin On You (feat. Bruno Mars)
+        artist: '@artist_bob'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL210', 9)>
+        includesHq: true
+        genre: '@genre_17'
+    HEAL210_11:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 3
+        title: Need You Now
+        artist: '@artist_ladyAntebellum'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL210', 10)>
+        includesHq: true
+        genre: '@genre_17'
+    HEAL210_12:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 3
+        title: Lights
+        artist: '@artist_ellie'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL210', 11)>
+        includesHq: true
+        genre: '@genre_17'
+    HEAL210_13:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 3
+        title: Hey Soul Sister
+        artist: '@artist_train'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL210', 12)>
+        includesHq: true
+        genre: '@genre_17'
+    HEAL210_14:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 3
+        title: Give Me Everything
+        artist: '@artist_pitbull'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL210', 13)>
+        includesHq: true
+        genre: '@genre_17'
+    HEAL210_15:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 3
+        title: Firework
+        artist: '@artist_katy'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL210', 14)>
+        includesHq: true
+        genre: '@genre_17'
+    HEAL210_16:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 3
+        title: E.T.
+        artist: '@artist_katy'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL210', 15)>
+        includesHq: true
+        genre: '@genre_17'
+    HEAL210_17:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 3
+        title: Can't Hold Us (feat. Ray Dalton)
+        artist: '@artist_MacklemoreLewis'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL210', 16)>
+        includesHq: true
+        genre: '@genre_17'
+    HEAL210_18:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 3
+        title: Call Me Maybe
+        artist: '@artist_carly'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL210', 17)>
+        includesHq: true
+        genre: '@genre_17'
+    HEAL210_19:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 3
+        title: California Gurls
+        artist: '@artist_katy'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL210', 18)>
+        includesHq: true
+        genre: '@genre_17'
+    HEAL210_20:
+        createdAt: <datetimeBetween('-700 days', 'now')>
+        type: 3
+        title: Blurred Lines (feat. T.I. & Pharell)
+        artist: '@artist_robin'
+        description: Stet clita kasd gubergren, no sea takimata sanctus est.
+        file: <uploadFile('HEAL210', 19)>
+        includesHq: true
+        genre: '@genre_17'
+
+
+AppBundle\Entity\TherapyRecommendation:
+    recommendation_1:
+        title: As long as needed
+    recommendation_2:
+        title: When going to bed
+    recommendation_3:
+        title: In the morning
+    recommendation_4:
+            title: When needed
+    recommendation_5:
+            title: Start creative/focus process after 3 min listening

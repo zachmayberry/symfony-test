@@ -1,0 +1,59 @@
+# src/Acme/ProjectBundle/Resources/config/validation.yml
+UserBundle\Entity\User:
+    properties:
+        firstname:
+            - Length:
+#                min: 3 # disabled since facebook and google users could have only one character as name
+#                minMessage: "First name must have at least {{ limit }} characters."
+                max: 255
+                maxMessage: "The first name is too long."
+            - NotBlank:
+                message: "Please enter a first name"
+        lastname:
+            - Length:
+#                min: 1 # disabled since facebook and google users could have only one character as name
+#                minMessage: "Last name must have at least {{ limit }} characters."
+                max: 255
+                maxMessage: "The last name is too long."
+            - NotBlank:
+                message: "Please enter a last name"
+        email:
+            - Length:
+                min: 5
+                minMessage: "The email must have at least {{ limit }} characters."
+                max: 255
+                maxMessage: "The email is too long."
+            - NotBlank:
+                message: "Please enter an email"
+            - Email:
+                message: "This is not a valid email address"
+        plainPassword:
+            - Length:
+                min: 8
+                minMessage: "The password must have at least {{ limit }} characters."
+                max: 255
+                maxMessage: "The password is too long."
+            - NotBlank:
+                message: "Please enter a password"
+
+Acme\ProjectBundle\Form\Model\ChangePassword:
+    properties:
+        new:
+            - Length:
+                min: 8
+                minMessage: "The password must have at least {{ limit }} characters."
+                max: 255
+                maxMessage: "The password is too long."
+            - NotBlank:
+                message: "Please enter a password"
+
+Acme\ProjectBundle\Form\Model\ResetPassword:
+    properties:
+        new:
+            - Length:
+                min: 8
+                minMessage: "The password must have at least {{ limit }} characters."
+                max: 255
+                maxMessage: "The password is too long."
+            - NotBlank:
+                message: "Please enter a password"
